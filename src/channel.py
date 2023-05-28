@@ -37,32 +37,29 @@ class Channel:
 
     def __sub__(self, other):
         return int(self.subscriberCount) - int(other.subscriberCount)
+
+    def __sub__(self, other):
         return int(other.subscriberCount) - int(self.subscriberCount)
 
 
     def __gt__(self, other):
-        if int(self.subscriberCount) > int(other.subscriberCount):
-            return True
-        else:
-            return False
+        return int(self.subscriberCount) > int(other.subscriberCount)
 
     def __ge__(self, other):
-        if int(self.subscriberCount) >= int(other.subscriberCount):
-            return True
-        else:
-            return False
+        return int(self.subscriberCount) >= int(other.subscriberCount)
+
 
     def __lt__(self, other):
-        if int(self.subscriberCount) < int(other.subscriberCount):
-            return True
+        return int(self.subscriberCount) < int(other.subscriberCount)
+
 
     def __le__(self, other):
-        if int(self.subscriberCount) <= int(other.subscriberCount):
-            return True
+        return int(self.subscriberCount) <= int(other.subscriberCount)
+
 
     def __aeq__(self, other):
-        if int(self.subscriberCount) == int(other.subscriberCount):
-            return False
+        return int(self.subscriberCount) == int(other.subscriberCount)
+
 
 
     def print_info(self):
